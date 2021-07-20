@@ -8,7 +8,7 @@ Output: 18
 Explanation: Pick numbers 3, 6, 1 and 8 their sum is 18 (maximum sum divisible by 3).
 ```
 ### Code
-```cpp
+```python
 class Solution:
     def maxSumDivThree(self, nums: List[int]) -> int:
         #判斷內容物的性質
@@ -44,7 +44,7 @@ Input: nums = [3,6,5,1,1010], target = 7
 Output: [1,3]
 ```
 ### Code
-```cpp
+```python
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         for i in range(len(nums)):
