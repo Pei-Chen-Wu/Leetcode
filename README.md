@@ -55,3 +55,40 @@ class Solution:
 ```
 ![image](https://user-images.githubusercontent.com/69243911/126322610-cf6d57e0-daba-450c-922f-a64740554438.png)
 
+## [41. First Missing Positive](https://leetcode.com/problems/first-missing-positive/)
+Example:
+```
+Input: nums = [1,2,0]
+Output: 3
+```
+## Code_1
+逐筆檢查 
+```python
+class Solution:
+    def firstMissingPositive(self, nums: List[int]) -> int:
+        i = 1
+        while True:
+            if i not in distinct:
+                return i
+            i += 1
+```
+## Code_2
+```python
+class Solution:
+    def firstMissingPositive(self, nums: List[int]) -> int:
+        nums.append(0)
+        l = len(nums)
+        if l == 1:
+            return 1
+        for i in range(l):
+            if nums[i] < 0 or nums[i] >= l:
+                nums[i] = 0
+        for i in range(l):
+            nums[nums[i] % l] += l
+        for i in range(1, l):
+            if nums[i] < l:
+                return i
+        return l
+```
+
+
