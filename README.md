@@ -86,7 +86,7 @@ class Solution:
     def firstMissingPositive(self, nums: List[int]) -> int:
         nums.append(0)
         l = len(nums)
-        if l == 1:
+        if l == 1:   #代表無輸入
             return 1
         for i in range(l):
             if nums[i] < 0 or nums[i] >= l:
