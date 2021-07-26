@@ -75,7 +75,12 @@ class Solution:
 ![image](https://user-images.githubusercontent.com/69243911/127019290-4c3dc49d-cea8-4f67-97c1-58e035c7ff2a.png)
 
 ## Code_2
-如果數組的長度是l，那麼結果最大就是l+1，所以吧所有負數和大於l+1的數，都變成0，給數組加一個0（處理0的情況），然後遍歷數組，把數對應下標的數加上l+1，最後再遍歷一遍，第一個小於等於l的數，就是結果
+* 如果數組的長度是l，那麼結果最大就是l+1
+* 給數組加一個0（處理0的情況）
+* 把所有負數和大於l+1的數，都變成0
+* 遍歷數組，把數對應下標的數加上l+1
+* 再遍歷一遍，第一個小於等於l的數，就是結果
+
 ```python
 class Solution:
     def firstMissingPositive(self, nums: List[int]) -> int:
