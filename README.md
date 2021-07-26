@@ -72,6 +72,8 @@ class Solution:
                 return i
             i += 1
 ```
+![image](https://user-images.githubusercontent.com/69243911/127019290-4c3dc49d-cea8-4f67-97c1-58e035c7ff2a.png)
+
 ## Code_2
 ```python
 class Solution:
@@ -90,5 +92,6 @@ class Solution:
                 return i
         return l
 ```
+![image](https://user-images.githubusercontent.com/69243911/127019341-cde7cdc6-555c-4e62-a449-1e47d7e1dc5f.png)
 
 
