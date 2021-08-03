@@ -61,7 +61,7 @@ Example:
 Input: nums = [1,2,0]
 Output: 3
 ```
-## Code_1
+### Code_1
 逐筆檢查 
 ```python
 class Solution:
@@ -74,7 +74,7 @@ class Solution:
 ```
 ![image](https://user-images.githubusercontent.com/69243911/127019290-4c3dc49d-cea8-4f67-97c1-58e035c7ff2a.png)
 
-## Code_2
+### Code_2
 * 如果數組的長度是L，那麼結果最大就是L+1
 * 給數組加一個0（處理0的情況），把長度令為l
 * 把所有負數和大於等於l的數，都變成0
@@ -103,4 +103,30 @@ class Solution:
 ```
 ![image](https://user-images.githubusercontent.com/69243911/127019341-cde7cdc6-555c-4e62-a449-1e47d7e1dc5f.png)
 
+## [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+Example:
+![image](https://user-images.githubusercontent.com/69243911/128008569-f27b865c-a723-4016-886f-9d76d9987aa7.png)
 
+```
+Input: height = [0,1,0,2,1,0,1,3,2,1,2,1]
+Output: 6
+```
+### Code_1
+1. 運行循環直到遍歷數組中的所有柱。 
+2. 在當前柱的左側找到最大值。將此值設為 left_max。
+3. 在當前柱的右側找到最大值。將此值設為 right_max。
+4. 找到 left_max 和 right_max 之間的最小值。
+5. 從當前柱中減去最小值。
+6. 如果結果值大於 0，則將其添加到我們的結果中。由於我們不能有負數量的水被困，我們忽略它。
+```python
+class Solution:
+    def trap(self, height: List[int]) -> int: 
+        total_water = 0 
+        for i in range(1, len(height)-1): 
+            l = max(height[:i]) 
+            r = max (height[i+1:]) 
+            water = min(l, r) - height[i] 
+            if(water>=0): 
+                total_water += water 
+        return total_water
+```
