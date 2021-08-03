@@ -130,5 +130,5 @@ class Solution:
                 total_water += water 
         return total_water
 ```
-![image](https://user-images.githubusercontent.com/69243911/128019570-876ace64-2976-4e32-83b9-2c232eecb4ff.png)
+![image](https://user-images.githubusercontent.com/69243911/128019991-f74f0774-8b74-49b9-aab9-b07f7856e1d5.png)
 
