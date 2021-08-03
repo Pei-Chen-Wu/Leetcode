@@ -123,9 +123,9 @@ class Solution:
     def trap(self, height: List[int]) -> int: 
         total_water = 0 
         for i in range(1, len(height)-1): 
-            l = max(height[:i]) 
-            r = max (height[i+1:]) 
-            water = min(l, r) - height[i] 
+            left_max = max(height[:i]) 
+            right_max  = max (height[i+1:]) 
+            water = min(left_max, right_max ) - height[i] 
             if(water>=0): 
                 total_water += water 
         return total_water
