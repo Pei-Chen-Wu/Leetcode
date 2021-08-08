@@ -19,3 +19,4 @@ class Solution:
             maxGap = max(maxGap, num[x + 1] - num[x])
         return maxGap
 ```
+![image](https://user-images.githubusercontent.com/69243911/128641027-07a8f55b-9d64-40df-b2f1-383fe7c89291.png)
