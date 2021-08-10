@@ -21,7 +21,7 @@ class Solution:
 ```
 ![image](https://user-images.githubusercontent.com/69243911/128641027-07a8f55b-9d64-40df-b2f1-383fe7c89291.png)
 
-### Code_2
+### Code_2(bucketsort)
 ```python
 class Solution:
     def maximumGap(self, nums: List[int]) -> int:
@@ -48,3 +48,9 @@ class Solution:
         return maxGap
 ```
 ![image](https://user-images.githubusercontent.com/69243911/128853169-33167ec7-9e60-47d7-85f8-768f0fd95cc1.png)
+
+### Code_3(Radix Sort)
+![image](https://user-images.githubusercontent.com/69243911/128853907-1e9040df-3e9d-4bb2-8d11-4ea3537680bb.png)
+![image](https://user-images.githubusercontent.com/69243911/128853799-393fcfcc-5065-4dbb-a17e-2a7e22373375.png)
+![image](https://user-images.githubusercontent.com/69243911/128853867-e7444aa9-68e5-463d-9af2-1b2589b4f6b7.png)
+
