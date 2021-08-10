@@ -30,7 +30,8 @@ class Solution:
 class Solution:
     def maximumGap(self, nums: List[int]) -> int:
         def bucketsort(data):
-            max_score = 1000000000
+            s = max(nums)
+            max_score = s
             bucket = []
     
             for i in range(max_score+1):
