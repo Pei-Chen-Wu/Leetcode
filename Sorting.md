@@ -53,4 +53,46 @@ class Solution:
 ![image](https://user-images.githubusercontent.com/69243911/128853907-1e9040df-3e9d-4bb2-8d11-4ea3537680bb.png)
 ![image](https://user-images.githubusercontent.com/69243911/128853799-393fcfcc-5065-4dbb-a17e-2a7e22373375.png)
 ![image](https://user-images.githubusercontent.com/69243911/128853867-e7444aa9-68e5-463d-9af2-1b2589b4f6b7.png)
+```python
+class Solution:
+    def maximumGap(self, nums: List[int]) -> int:
+        def countingSort(inputArray):
+            # Find the maximum element in the inputArray
+            maxEl = max(inputArray)
 
+            countArrayLength = maxEl+1
+
+            # Initialize the countArray with (max+1) zeros
+            countArray = [0] * countArrayLength
+
+            # Step 1 -> Traverse the inputArray and increase 
+            # the corresponding count for every element by 1
+            for el in inputArray: 
+                countArray[el] += 1
+
+            # Step 2 -> For each element in the countArray, 
+            # sum up its value with the value of the previous 
+            # element, and then store that value 
+            # as the value of the current element
+            for i in range(1, countArrayLength):
+                countArray[i] += countArray[i-1] 
+
+            # Step 3 -> Calculate element position
+            # based on the countArray values
+            outputArray = [0] * len(inputArray)
+            i = len(inputArray) - 1
+            while i >= 0:
+                currentEl = inputArray[i]
+                countArray[currentEl] -= 1
+                newPosition = countArray[currentEl]
+                outputArray[newPosition] = currentEl
+                i -= 1
+
+            return outputArray
+        
+        num = countingSort(nums)        
+        maxGap = 0
+        for x in range(len(num) - 1):
+            maxGap = max(maxGap, num[x + 1] - num[x])
+        return maxGap
+```
