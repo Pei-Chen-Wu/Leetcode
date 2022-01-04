@@ -1,4 +1,12 @@
 # Leetcode
+## 步驟
+- Input? data格式？ 期望output?
+- 有思路
+- 寫下pseudo code 確認無誤
+- 卡住就討論 將理解及想法給面試官
+- 探討空間與時間複雜度
+
+
 
 ## [Leetcode 1262. Greatest Sum Divisible by Three](https://leetcode.com/problems/greatest-sum-divisible-by-three/)
 Example:
